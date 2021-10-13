@@ -94,6 +94,16 @@ const Home: NextPage = () => {
 					</h2>
 				</div>
 				<div className="drop-details">
+					<div className="detail-icon">
+						<Image
+							src="/images/brooklyn_bridge.svg"
+							loading="lazy"
+							width="32"
+							height="32"
+							alt="Brooklyn Bridge icon"
+							className="detail-icon-img"
+						/>
+					</div>
 					<h3 className="callout">the first drop</h3>
 					<h4 className="detail-hd">Brooklyn</h4>
 					<p>
