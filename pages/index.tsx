@@ -16,6 +16,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const ContractStats = dynamic(
+	// @ts-ignore Not sure why typing is off.
+	() => import('../components/ContractStats').then((mod) => mod.ContractStats),
+	{ loading: () => <p>loading contract stats…</p>, ssr: false },
+)
 
 const Home: NextPage = () => {
 	return (
@@ -141,8 +148,7 @@ const Home: NextPage = () => {
 					<p>
 						<a href="#">0x000000000000000000000000000000</a>
 					</p>
-					<p>Mint Fee: 0.05 ETH</p>
-					<p>0 / 500 minted</p>
+					<ContractStats />
 				</div>
 				<div className="details">
 					<div className="detail-item">
