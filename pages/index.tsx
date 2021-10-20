@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 					name="description"
 				/>
 				<meta
-					content="Places DAO | an open atlas curated by the world and stored on chain"
+					content="PlacesDAO | an open atlas curated by the world and stored on chain"
 					property="og:title"
 				/>
 				<meta
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 				/>
 				<meta content="/images/og.png" property="og:image" />
 				<meta
-					content="Places DAO | an open atlas curated by the world and stored on chain"
+					content="PlacesDAO | an open atlas curated by the world and stored on chain"
 					property="twitter:title"
 				/>
 				<meta
