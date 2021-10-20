@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 		<>
 			<Head>
 				<title>
-					Places DAO | an open atlas curated by the world and stored on chain
+					PlacesDAO | an open atlas curated by the world and stored on chain
 				</title>
 				<meta
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
