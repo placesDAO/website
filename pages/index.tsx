@@ -141,7 +141,7 @@ const Home: NextPage = () => {
 					<p>
 						<a href="#">0x000000000000000000000000000000</a>
 					</p>
-					<p>Mint Fee: 0.06 ETH</p>
+					<p>Mint Fee: 0.05 ETH</p>
 					<p>0 / 500 minted</p>
 				</div>
 				<div className="details">
