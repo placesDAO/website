@@ -3,7 +3,7 @@ import Web3 from 'web3'
 
 import contractAbi from '../contract-abi.dev.json'
 
-const PLACES_CONTRACT_ADDRESS = '0xf0a62Fd8a5888eEFed99736cb59c627B8FADEfCc'
+const PLACES_CONTRACT_ADDRESS = '0xA2d5b3C437e70BF1d61e647fa391E1C67f92EcdA'
 
 const web3 = new Web3()
 web3.eth.setProvider(
