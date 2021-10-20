@@ -3,18 +3,18 @@
 		"inputs": [
 			{
 				"internalType": "address payable",
-				"name": "_placesDAO",
+				"name": "placesDAO",
 				"type": "address"
 			},
-			{ "internalType": "address", "name": "_grounders", "type": "address" },
+			{ "internalType": "address", "name": "grounders", "type": "address" },
 			{
 				"internalType": "contract IPlacesDescriptor",
-				"name": "_placesDescriptor",
+				"name": "placesDescriptor",
 				"type": "address"
 			},
 			{
 				"internalType": "contract IPlacesProvider",
-				"name": "_placesProvider",
+				"name": "placesProvider",
 				"type": "address"
 			},
 			{ "internalType": "address", "name": "_proxyAddress", "type": "address" }
@@ -95,7 +95,7 @@
 				"type": "bool"
 			}
 		],
-		"name": "GroundersGiftingUpdated",
+		"name": "GroundersGiftingEnabledUpdated",
 		"type": "event"
 	},
 	{
@@ -109,6 +109,19 @@
 			}
 		],
 		"name": "GroundersUpdated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "isEnabled",
+				"type": "bool"
+			}
+		],
+		"name": "GuestlistEnabledUpdated",
 		"type": "event"
 	},
 	{
@@ -205,7 +218,7 @@
 				"type": "address"
 			}
 		],
-		"name": "ProviderUpdated",
+		"name": "PlacesProviderUpdated",
 		"type": "event"
 	},
 	{
@@ -247,6 +260,50 @@
 		"type": "event"
 	},
 	{
+		"inputs": [],
+		"name": "GEO_RESOLUTION_INT",
+		"outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_LATITUDE_INT",
+		"outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_LONGITUDE_INT",
+		"outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MIN_LATITUDE_INT",
+		"outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MIN_LONGITUDE_INT",
+		"outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "address", "name": "guestAddress", "type": "address" }
+		],
+		"name": "addGuest",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{ "internalType": "address", "name": "to", "type": "address" },
 			{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }
@@ -278,6 +335,15 @@
 		"inputs": [
 			{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }
 		],
+		"name": "contractURI",
+		"outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+		],
 		"name": "getApproved",
 		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
 		"stateMutability": "view",
@@ -303,10 +369,19 @@
 					{ "internalType": "string", "name": "longitude", "type": "string" },
 					{ "internalType": "string", "name": "altitude", "type": "string" }
 				],
-				"internalType": "struct IPlacesDrop.Location",
+				"internalType": "struct IPlaces.Location",
 				"name": "",
 				"type": "tuple"
 			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMintFeeInWei",
+		"outputs": [
+			{ "internalType": "uint256", "name": "currentMintFee", "type": "uint256" }
 		],
 		"stateMutability": "view",
 		"type": "function"
@@ -370,7 +445,7 @@
 							},
 							{ "internalType": "string", "name": "altitude", "type": "string" }
 						],
-						"internalType": "struct IPlacesDrop.Location",
+						"internalType": "struct IPlaces.Location",
 						"name": "location",
 						"type": "tuple"
 					},
@@ -380,7 +455,7 @@
 						"type": "string[3]"
 					}
 				],
-				"internalType": "struct IPlacesDrop.Place",
+				"internalType": "struct IPlaces.Place",
 				"name": "",
 				"type": "tuple"
 			}
@@ -390,9 +465,20 @@
 	},
 	{
 		"inputs": [],
-		"name": "grounders",
-		"outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+		"name": "getPlaceSupply",
+		"outputs": [
+			{ "internalType": "uint256", "name": "supplyCount", "type": "uint256" }
+		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }
+		],
+		"name": "grounderMint",
+		"outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -401,13 +487,6 @@
 			{ "internalType": "address", "name": "operator", "type": "address" }
 		],
 		"name": "isApprovedForAll",
-		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "isGroundersGiftingEnabled",
 		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
 		"stateMutability": "view",
 		"type": "function"
@@ -455,15 +534,6 @@
 		"inputs": [],
 		"name": "paused",
 		"outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "placesDAO",
-		"outputs": [
-			{ "internalType": "address payable", "name": "", "type": "address" }
-		],
 		"stateMutability": "view",
 		"type": "function"
 	},
@@ -522,7 +592,7 @@
 	},
 	{
 		"inputs": [
-			{ "internalType": "uint256", "name": "countValue", "type": "uint256" }
+			{ "internalType": "uint256", "name": "_countValue", "type": "uint256" }
 		],
 		"name": "setCounter",
 		"outputs": [],
@@ -533,7 +603,7 @@
 		"inputs": [
 			{
 				"internalType": "contract IPlacesDescriptor",
-				"name": "_placesDescriptor",
+				"name": "placesDescriptor",
 				"type": "address"
 			}
 		],
@@ -544,9 +614,18 @@
 	},
 	{
 		"inputs": [
+			{ "internalType": "address", "name": "grounders", "type": "address" }
+		],
+		"name": "setGrounders",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
 			{
 				"internalType": "bool",
-				"name": "_isGroundersGiftingEnabled",
+				"name": "isGroundersGiftingEnabled",
 				"type": "bool"
 			}
 		],
@@ -557,7 +636,25 @@
 	},
 	{
 		"inputs": [
-			{ "internalType": "uint256", "name": "_mintFee", "type": "uint256" }
+			{ "internalType": "address[]", "name": "guestlist", "type": "address[]" }
+		],
+		"name": "setGuestlist",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "bool", "name": "isGuestlistEnabled", "type": "bool" }
+		],
+		"name": "setGuestlistEnabled",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{ "internalType": "uint256", "name": "mintFee", "type": "uint256" }
 		],
 		"name": "setMintFee",
 		"outputs": [],
@@ -565,7 +662,7 @@
 		"type": "function"
 	},
 	{
-		"inputs": [{ "internalType": "bool", "name": "_paused", "type": "bool" }],
+		"inputs": [{ "internalType": "bool", "name": "paused", "type": "bool" }],
 		"name": "setPaused",
 		"outputs": [],
 		"stateMutability": "nonpayable",
@@ -575,7 +672,7 @@
 		"inputs": [
 			{
 				"internalType": "address payable",
-				"name": "_placesDAO",
+				"name": "placesDAO",
 				"type": "address"
 			}
 		],
@@ -588,11 +685,11 @@
 		"inputs": [
 			{
 				"internalType": "contract IPlacesProvider",
-				"name": "_placesProvider",
+				"name": "placesProvider",
 				"type": "address"
 			}
 		],
-		"name": "setProvider",
+		"name": "setPlacesProvider",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
