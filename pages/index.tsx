@@ -35,6 +35,7 @@ const Home: NextPage = () => {
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
 					name="description"
 				/>
+				<meta property="og:url" content="https://www.places.xyz" />
 				<meta
 					content="PlacesDAO | an open atlas curated by the world and stored on chain"
 					property="og:title"
