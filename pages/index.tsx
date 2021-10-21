@@ -16,6 +16,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const ContractStats = dynamic(
+	// @ts-ignore Not sure why typing is off.
+	() => import('../components/ContractStats').then((mod) => mod.ContractStats),
+	{ loading: () => <p>loading contract stats…</p>, ssr: false },
+)
 
 const Home: NextPage = () => {
 	return (
@@ -54,36 +61,39 @@ const Home: NextPage = () => {
 					type="image/x-icon"
 				/>
 			</Head>
-			<div className="confidential">
-				<div>¡CONFIDENTIAL DRAFT — DO NOT SHARE!</div>
-			</div>
 			<div className="nav">
 				<div className="nav-wrapper">
 					<div className="nav-pin"></div>
 					<div className="nav-title">Places</div>
 					<div className="nav-items">
 						<a
-							href="https://placesdao.notion.site/Welcome-to-Places-f8fb9b0c0e1a44d9afbc0fae278c0f6b"
+							href={process.env.NEXT_PUBLIC_URL_INTRO}
 							className="nav-item-link"
 						>
 							Intro
 						</a>
-						<a href="http://twitter.com/placesDAO" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_URL_TWITTER}
+							className="nav-item-link"
+						>
 							Twitter
 						</a>
-						<a href="#" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_URL_DISCORD}
+							className="nav-item-link"
+						>
 							{' '}
-							{/* TODO Discord Nav Item Link */}
 							Discord
 						</a>
-						<a href="#" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
+							className="nav-item-link"
+						>
 							Etherscan
 						</a>{' '}
-						{/* TODO Etherscan Nav Item Link */}
 						<a href="#" className="nav-item-link">
 							Places.eth
 						</a>{' '}
-						{/* TODO Places.eth Nav Item Link */}
 					</div>
 				</div>
 			</div>
@@ -139,10 +149,11 @@ const Home: NextPage = () => {
 						risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
 					</p>
 					<p>
-						<a href="#">0x000000000000000000000000000000</a>
+						<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
+							{process.env.NEXT_PUBLIC_ETH_ADDRESS}
+						</a>
 					</p>
-					<p>Mint Fee: 0.05 ETH</p>
-					<p>0 / 500 minted</p>
+					<ContractStats />
 				</div>
 				<div className="details">
 					<div className="detail-item">
@@ -245,7 +256,10 @@ const Home: NextPage = () => {
 								from this website.
 							</p>
 							<p>
-								Places Contract: <a href="#">0x0000000000000000000000FIXTHIS</a>
+								Places Contract:{' '}
+								<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
+									{process.env.NEXT_PUBLIC_ETH_ADDRESS}
+								</a>
 							</p>
 						</div>
 					</div>
@@ -269,7 +283,7 @@ const Home: NextPage = () => {
 								Neighborhood treasury (defined per each drop) where it will be
 								disbursed to one or more local projects at the decision of
 								PlacesDAO. Here&#x27;s{' '}
-								<a href="https://placesdao.notion.site/Neighborhood-Grants-0514a53a3d874fc088cb9dc9f9d6334b">
+								<a href={process.env.NEXT_PUBLIC_URL_NEIGHBORHOOD_GRANTS}>
 									how neighborhood grants will work
 								</a>
 								.
@@ -351,7 +365,7 @@ const Home: NextPage = () => {
 							</p>
 							<p>
 								Here is{' '}
-								<a href="https://placesdao.notion.site/Project-Ideas-cf4bd84defb14d7d8961bcbb255d5c1e">
+								<a href={process.env.NEXT_PUBLIC_URL_IDEAS}>
 									a running list of ideas
 								</a>{' '}
 								gathered by our community.
@@ -362,17 +376,18 @@ const Home: NextPage = () => {
 			</div>
 			<footer className="footer">
 				<div className="footer-link-set">
-					<a href="http://twitter.com/placesDAO" className="footer-link">
+					<a href={process.env.NEXT_PUBLIC_URL_TWITTER} className="footer-link">
 						Twitter
 					</a>
-					<a href="#" className="footer-link">
+					<a href={process.env.NEXT_PUBLIC_URL_DISCORD} className="footer-link">
 						Discord
 					</a>
-					{/* TODO Discord Footer Link */}
-					<a href="#" className="footer-link">
+					<a
+						href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
+						className="footer-link"
+					>
 						Etherscan
 					</a>
-					{/* TODO Etherscan Footer Link */}
 				</div>
 			</footer>
 		</>
