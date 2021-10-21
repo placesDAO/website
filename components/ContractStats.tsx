@@ -27,7 +27,13 @@ export const ContractStats = () => {
 
 	return (
 		<>
-			<p>Mint Fee: {mintFee !== null ? mintFee : 'loading balance…'} ETH</p>
+			<p>
+				Mint Fee:{' '}
+				{mintFee !== null
+					? web3.utils.fromWei(mintFee, 'ether')
+					: 'loading balance…'}{' '}
+				ETH
+			</p>
 			<p>
 				{totalSupply !== null ? totalSupply : 'loading available supply…'} /{' '}
 				{placeSupply !== null ? placeSupply : 'loading total supply…'} minted
