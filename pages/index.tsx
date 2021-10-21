@@ -91,7 +91,10 @@ const Home: NextPage = () => {
 						>
 							Etherscan
 						</a>{' '}
-						<a href="#" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_PLACES_ETH}
+							className="nav-item-link"
+						>
 							Places.eth
 						</a>{' '}
 					</div>
