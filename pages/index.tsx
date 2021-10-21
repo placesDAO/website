@@ -411,7 +411,7 @@ const Home: NextPage = () => {
 						Etherscan
 					</a>
 					<a href={process.env.NEXT_PUBLIC_URL_OPENSEA} className="footer-link">
-						OpenSea
+						Open Sea
 					</a>
 				</div>
 			</footer>
