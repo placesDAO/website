@@ -6,9 +6,7 @@ import contractAbi from '../contract-abi.json'
 const PLACES_CONTRACT_ADDRESS = '0xC9CA129DC3a299aF68A215d85771630aec4C3C2b'
 
 const web3 = new Web3()
-web3.eth.setProvider(
-	'wss://mainnet.infura.io/ws/v3/865185249fa646ceadb4b51b09fe39a4',
-)
+web3.eth.setProvider(process.env.NEXT_PUBLIC_PROVIDER_ADDRESS as string)
 const contract = new web3.eth.Contract(
 	contractAbi as any,
 	PLACES_CONTRACT_ADDRESS,
