@@ -141,6 +141,19 @@
 		"anonymous": false,
 		"inputs": [
 			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "isEnabled",
+				"type": "bool"
+			}
+		],
+		"name": "NeighborhoodTreasuryEnabledUpdated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
 				"indexed": true,
 				"internalType": "address",
 				"name": "previousOwner",
@@ -350,6 +363,15 @@
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "getGroundersGiftingEnabled",
+		"outputs": [
+			{ "internalType": "bool", "name": "isEnabled", "type": "bool" }
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{ "internalType": "uint256", "name": "tokenId", "type": "uint256" }
 		],
@@ -382,6 +404,15 @@
 		"name": "getMintFeeInWei",
 		"outputs": [
 			{ "internalType": "uint256", "name": "currentMintFee", "type": "uint256" }
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getNeighborhoodTreasuryEnabled",
+		"outputs": [
+			{ "internalType": "bool", "name": "isEnabled", "type": "bool" }
 		],
 		"stateMutability": "view",
 		"type": "function"
@@ -657,6 +688,19 @@
 			{ "internalType": "uint256", "name": "mintFee", "type": "uint256" }
 		],
 		"name": "setMintFee",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "isNeighborhoodTreasuryEnabled",
+				"type": "bool"
+			}
+		],
+		"name": "setNeighborhoodTreasury",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"

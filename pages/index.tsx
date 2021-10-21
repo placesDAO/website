@@ -146,7 +146,9 @@ const Home: NextPage = () => {
 						risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
 					</p>
 					<p>
-						<a href="#">0x000000000000000000000000000000</a>
+						<a href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code">
+							0xC9CA129DC3a299aF68A215d85771630aec4C3C2b
+						</a>
 					</p>
 					<ContractStats />
 				</div>
