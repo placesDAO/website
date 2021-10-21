@@ -44,6 +44,7 @@ const Home: NextPage = () => {
 					property="og:description"
 				/>
 				<meta content="/images/og.png" property="og:image" />
+				<meta name="twitter:card" content="summary_large_image" />
 				<meta
 					content="PlacesDAO | an open atlas curated by the world and stored on chain"
 					property="twitter:title"
