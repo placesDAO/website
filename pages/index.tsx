@@ -92,11 +92,17 @@ const Home: NextPage = () => {
 							Etherscan
 						</a>{' '}
 						<a
-							href={process.env.NEXT_PUBLIC_PLACES_ETH}
+							href={process.env.NEXT_PUBLIC_URL_PLACES_ETH}
 							className="nav-item-link"
 						>
 							Places.eth
 						</a>{' '}
+						<a
+							href={process.env.NEXT_PUBLIC_URL_OPENSEA}
+							className="nav-item-link"
+						>
+							Open Sea
+						</a>
 					</div>
 				</div>
 			</div>
@@ -390,6 +396,9 @@ const Home: NextPage = () => {
 						className="footer-link"
 					>
 						Etherscan
+					</a>
+					<a href={process.env.NEXT_PUBLIC_URL_OPENSEA} className="footer-link">
+						OpenSea
 					</a>
 				</div>
 			</footer>
