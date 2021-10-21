@@ -43,8 +43,12 @@ const Home: NextPage = () => {
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
 					property="og:description"
 				/>
-				<meta content="/images/og.png" property="og:image" />
+				<meta
+					content="https://www.places.xyz/images/og.png?cb=198223"
+					property="og:image"
+				/>
 				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@placesDAO" />
 				<meta
 					content="PlacesDAO | an open atlas curated by the world and stored on chain"
 					name="twitter:title"
@@ -53,7 +57,10 @@ const Home: NextPage = () => {
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
 					name="twitter:description"
 				/>
-				<meta content="/images/og_twitter.png?cb=098223" name="twitter:image" />
+				<meta
+					content="https://www.places.xyz/images/og_twitter.png?cb=198223"
+					name="twitter:image"
+				/>
 				<meta
 					content="Blue map marker representing PlacesDAO."
 					name="twitter:image:alt"
