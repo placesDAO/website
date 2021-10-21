@@ -61,29 +61,32 @@ const Home: NextPage = () => {
 					type="image/x-icon"
 				/>
 			</Head>
-			<div className="confidential">
-				<div>¡CONFIDENTIAL DRAFT — DO NOT SHARE!</div>
-			</div>
 			<div className="nav">
 				<div className="nav-wrapper">
 					<div className="nav-pin"></div>
 					<div className="nav-title">Places</div>
 					<div className="nav-items">
 						<a
-							href="https://placesdao.notion.site/Welcome-to-Places-f8fb9b0c0e1a44d9afbc0fae278c0f6b"
+							href={process.env.NEXT_PUBLIC_URL_INTRO}
 							className="nav-item-link"
 						>
 							Intro
 						</a>
-						<a href="http://twitter.com/placesDAO" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_URL_TWITTER}
+							className="nav-item-link"
+						>
 							Twitter
 						</a>
-						<a href="https://discord.gg/6K7xSwhW" className="nav-item-link">
+						<a
+							href={process.env.NEXT_PUBLIC_URL_DISCORD}
+							className="nav-item-link"
+						>
 							{' '}
 							Discord
 						</a>
 						<a
-							href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code"
+							href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
 							className="nav-item-link"
 						>
 							Etherscan
@@ -146,8 +149,8 @@ const Home: NextPage = () => {
 						risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
 					</p>
 					<p>
-						<a href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code">
-							0xC9CA129DC3a299aF68A215d85771630aec4C3C2b
+						<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
+							{process.env.NEXT_PUBLIC_ETH_ADDRESS}
 						</a>
 					</p>
 					<ContractStats />
@@ -254,8 +257,8 @@ const Home: NextPage = () => {
 							</p>
 							<p>
 								Places Contract:{' '}
-								<a href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code">
-									0xC9CA129DC3a299aF68A215d85771630aec4C3C2b
+								<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
+									{process.env.NEXT_PUBLIC_ETH_ADDRESS}
 								</a>
 							</p>
 						</div>
@@ -280,7 +283,7 @@ const Home: NextPage = () => {
 								Neighborhood treasury (defined per each drop) where it will be
 								disbursed to one or more local projects at the decision of
 								PlacesDAO. Here&#x27;s{' '}
-								<a href="https://placesdao.notion.site/Neighborhood-Grants-0514a53a3d874fc088cb9dc9f9d6334b">
+								<a href={process.env.NEXT_PUBLIC_URL_NEIGHBORHOOD_GRANTS}>
 									how neighborhood grants will work
 								</a>
 								.
@@ -362,7 +365,7 @@ const Home: NextPage = () => {
 							</p>
 							<p>
 								Here is{' '}
-								<a href="https://placesdao.notion.site/Project-Ideas-cf4bd84defb14d7d8961bcbb255d5c1e">
+								<a href={process.env.NEXT_PUBLIC_URL_IDEAS}>
 									a running list of ideas
 								</a>{' '}
 								gathered by our community.
@@ -373,14 +376,14 @@ const Home: NextPage = () => {
 			</div>
 			<footer className="footer">
 				<div className="footer-link-set">
-					<a href="http://twitter.com/placesDAO" className="footer-link">
+					<a href={process.env.NEXT_PUBLIC_URL_TWITTER} className="footer-link">
 						Twitter
 					</a>
-					<a href="https://discord.gg/6K7xSwhW" className="footer-link">
+					<a href={process.env.NEXT_PUBLIC_URL_DISCORD} className="footer-link">
 						Discord
 					</a>
 					<a
-						href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code"
+						href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
 						className="footer-link"
 					>
 						Etherscan
