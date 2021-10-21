@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
 					name="twitter:description"
 				/>
-				<meta content="/images/og.png" name="twitter:image" />
+				<meta content="/images/og_twitter.png" name="twitter:image" />
 				<meta
 					content="Blue map marker representing PlacesDAO."
 					name="twitter:image:alt"
