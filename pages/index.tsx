@@ -78,19 +78,19 @@ const Home: NextPage = () => {
 						<a href="http://twitter.com/placesDAO" className="nav-item-link">
 							Twitter
 						</a>
-						<a href="#" className="nav-item-link">
+						<a href="https://discord.gg/6K7xSwhW" className="nav-item-link">
 							{' '}
-							{/* TODO Discord Nav Item Link */}
 							Discord
 						</a>
-						<a href="#" className="nav-item-link">
+						<a
+							href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code"
+							className="nav-item-link"
+						>
 							Etherscan
 						</a>{' '}
-						{/* TODO Etherscan Nav Item Link */}
 						<a href="#" className="nav-item-link">
 							Places.eth
 						</a>{' '}
-						{/* TODO Places.eth Nav Item Link */}
 					</div>
 				</div>
 			</div>
@@ -253,7 +253,10 @@ const Home: NextPage = () => {
 								from this website.
 							</p>
 							<p>
-								Places Contract: <a href="#">0x0000000000000000000000FIXTHIS</a>
+								Places Contract:{' '}
+								<a href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code">
+									0xC9CA129DC3a299aF68A215d85771630aec4C3C2b
+								</a>
 							</p>
 						</div>
 					</div>
@@ -373,14 +376,15 @@ const Home: NextPage = () => {
 					<a href="http://twitter.com/placesDAO" className="footer-link">
 						Twitter
 					</a>
-					<a href="#" className="footer-link">
+					<a href="https://discord.gg/6K7xSwhW" className="footer-link">
 						Discord
 					</a>
-					{/* TODO Discord Footer Link */}
-					<a href="#" className="footer-link">
+					<a
+						href="https://etherscan.io/address/0xC9CA129DC3a299aF68A215d85771630aec4C3C2b#code"
+						className="footer-link"
+					>
 						Etherscan
 					</a>
-					{/* TODO Etherscan Footer Link */}
 				</div>
 			</footer>
 		</>
