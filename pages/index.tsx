@@ -392,6 +392,12 @@ const Home: NextPage = () => {
 								</a>{' '}
 								gathered by our community.
 							</p>
+							<p>
+								This website and a handful of other project resources are {' '}
+								<a href={process.env.NEXT_PUBLIC_URL_GITHUB}>
+									open source
+								</a>{' '}.
+							</p>
 						</div>
 					</div>
 				</div>
