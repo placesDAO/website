@@ -404,6 +404,9 @@ const Home: NextPage = () => {
 					<a href={process.env.NEXT_PUBLIC_URL_DISCORD} className="footer-link">
 						Discord
 					</a>
+					<a href={process.env.NEXT_PUBLIC_URL_GITHUB} className="footer-link">
+						Open Source
+					</a>
 					<a
 						href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
 						className="footer-link"
