@@ -144,11 +144,11 @@ const Home: NextPage = () => {
 				<div className="drop-details">
 					<div className="detail-icon">
 						<Image
-							src="/images/brooklyn_bridge.svg"
+							src="/images/oakland.svg"
 							loading="lazy"
 							width="32"
 							height="32"
-							alt="Brooklyn Bridge icon"
+							alt="Oakland Tree icon"
 							className="detail-icon-img"
 						/>
 					</div>
