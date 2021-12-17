@@ -152,21 +152,17 @@ const Home: NextPage = () => {
 							className="detail-icon-img"
 						/>
 					</div>
-					<h3 className="callout">the first drop</h3>
-					<h4 className="detail-hd">Brooklyn</h4>
+					<h3 className="callout">the second drop</h3>
+					<h4 className="detail-hd">Oakland</h4>
 					<p>
-						Home to vibrant communities, notable landmarks, and some of the best
-						eateries in the world, our Brooklyn drop includes 500 unique
-						locations ready to mint. This inaugural drop includes places like
-						Nighthawk Cinema in Park Slope, the Parachute Jump in Coney Island,
-						and La Superior in Williamsburg.{' '}
+						Our second Places drop celebrates the city of Oakland with 500 unique locations found in the vibrant neighborhoods and communities of the East Bay. This drop includes places like Temescal Alley, Oakland Arena, Hasta Muerte Coffee in Fruitvale, and Guerilla Cafe in Berkeley.{' '}
 						<strong>
 							You won&#x27;t know which Place you&#x27;re getting until you
 							mint.
 						</strong>
 					</p>
 					<p>
-						Remember, this is still an experiment. Contract is not audited. You
+						Remember, Places is still an experiment. Contract is not audited. You
 						DO NOT have to be in or from the drop area to mint. Mint at your own
 						risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
 					</p>
