@@ -13,19 +13,19 @@ const contract = new web3.eth.Contract(
 	PLACES_CONTRACT_ADDRESS,
 )
 
-const getCurrentTotalSupply = (totalSupply: number) => {
-	if (totalSupply >= PREVIOUS_MINT_COUNT)
-		return totalSupply - PREVIOUS_MINT_COUNT
+// const getCurrentTotalSupply = (totalSupply: number) => {
+// 	if (totalSupply >= PREVIOUS_MINT_COUNT)
+// 		return totalSupply - PREVIOUS_MINT_COUNT
 
-	return totalSupply
-}
+// 	return totalSupply
+// }
 
-const getCurrentPlaceSupply = (placeSupply: number) => {
-	if (placeSupply >= PREVIOUS_MINT_COUNT)
-		return placeSupply - PREVIOUS_MINT_COUNT
+// const getCurrentPlaceSupply = (placeSupply: number) => {
+// 	if (placeSupply >= PREVIOUS_MINT_COUNT)
+// 		return placeSupply - PREVIOUS_MINT_COUNT
 
-	return placeSupply
-}
+// 	return placeSupply
+// }
 
 export const ContractStats = () => {
 	const [totalSupply, setTotalSupply] = useState<number | null>(null)
@@ -48,14 +48,8 @@ export const ContractStats = () => {
 				ETH
 			</p>
 			<p>
-				{totalSupply !== null
-					? getCurrentTotalSupply(totalSupply)
-					: 'loading available supply…'}{' '}
-				/{' '}
-				{placeSupply !== null
-					? getCurrentPlaceSupply(placeSupply)
-					: 'loading total supply…'}{' '}
-				minted
+				{totalSupply !== null ? totalSupply : 'loading available supply…'} /{' '}
+				{placeSupply !== null ? placeSupply : 'loading total supply…'} minted
 			</p>
 		</>
 	)
