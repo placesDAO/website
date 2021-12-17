@@ -4,6 +4,7 @@ import Web3 from 'web3'
 import contractAbi from '../contract-abi.json'
 
 const PLACES_CONTRACT_ADDRESS = '0xC9CA129DC3a299aF68A215d85771630aec4C3C2b'
+const PREVIOUS_MINT_COUNT = 500
 
 const web3 = new Web3()
 web3.eth.setProvider(process.env.NEXT_PUBLIC_PROVIDER_ADDRESS as string)
@@ -11,6 +12,20 @@ const contract = new web3.eth.Contract(
 	contractAbi as any,
 	PLACES_CONTRACT_ADDRESS,
 )
+
+const getCurrentTotalSupply = (totalSupply) => {
+	if (totalSupply >= PREVIOUS_MINT_COUNT)
+		return totalSupply - PREVIOUS_MINT_COUNT
+
+	return totalSupply
+}
+
+const getCurrentPlaceSupply = (placeSupply) => {
+	if (placeSupply >= PREVIOUS_MINT_COUNT)
+		return totalSupply - PREVIOUS_MINT_COUNT
+
+	return placeSupply
+}
 
 export const ContractStats = () => {
 	const [totalSupply, setTotalSupply] = useState<number | null>(null)
@@ -33,8 +48,14 @@ export const ContractStats = () => {
 				ETH
 			</p>
 			<p>
-				{totalSupply !== null ? totalSupply : 'loading available supply…'} /{' '}
-				{placeSupply !== null ? placeSupply : 'loading total supply…'} minted
+				{totalSupply !== null
+					? getCurrentTotalSupply(totalSupply)
+					: 'loading available supply…'}{' '}
+				/{' '}
+				{placeSupply !== null
+					? getCurrentPlaceSupply(placeSupply)
+					: 'loading total supply…'}{' '}
+				minted
 			</p>
 		</>
 	)
