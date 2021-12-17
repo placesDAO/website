@@ -13,16 +13,16 @@ const contract = new web3.eth.Contract(
 	PLACES_CONTRACT_ADDRESS,
 )
 
-const getCurrentTotalSupply = (totalSupply) => {
+const getCurrentTotalSupply = (totalSupply: number) => {
 	if (totalSupply >= PREVIOUS_MINT_COUNT)
 		return totalSupply - PREVIOUS_MINT_COUNT
 
 	return totalSupply
 }
 
-const getCurrentPlaceSupply = (placeSupply) => {
+const getCurrentPlaceSupply = (placeSupply: number) => {
 	if (placeSupply >= PREVIOUS_MINT_COUNT)
-		return totalSupply - PREVIOUS_MINT_COUNT
+		return placeSupply - PREVIOUS_MINT_COUNT
 
 	return placeSupply
 }
