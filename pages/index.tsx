@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 		<>
 			<Head>
 				<title>
-					PlacesDAO | an open atlas curated by the world and stored on chain
+					Places DAO | an open atlas curated by the world and stored on-chain
 				</title>
 				<meta
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing them an immutable home on chain."
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 				/>
 				<meta property="og:url" content="https://www.places.xyz" />
 				<meta
-					content="PlacesDAO | an open atlas curated by the world and stored on chain"
+					content="Places DAO | an open atlas curated by the world and stored on-chain"
 					property="og:title"
 				/>
 				<meta
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@placesDAO" />
 				<meta
-					content="PlacesDAO | an open atlas curated by the world and stored on chain"
+					content="Places DAO | an open atlas curated by the world and stored on-chain"
 					name="twitter:title"
 				/>
 				<meta
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 					name="twitter:image"
 				/>
 				<meta
-					content="Blue map marker representing PlacesDAO."
+					content="Blue map marker representing Places DAO."
 					name="twitter:image:alt"
 				/>
 				<meta property="og:type" content="website" />
@@ -127,7 +127,7 @@ const Home: NextPage = () => {
 						<br />
 						curated by the world
 						<br />
-						and stored on chain
+						and stored on-chain
 					</h1>
 				</div>
 			</div>
@@ -178,14 +178,14 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">What in the world?!</h3>
 						<div className="detail-content">
 							<p>
-								Each Place represents a named real-world geographic location
-								with associated place information. This includes neighborhood,
+								Each Place represents a named geographic location
+								with associated metadata. This metadata includes neighborhood,
 								street address, locality, a 3D geographic coordinate with
 								altitude, and categorical attributes such as{' '}
 								<span className="tag">Tacos</span>,{' '}
 								<span className="tag">Live Music</span>, or{' '}
 								<span className="tag">Historical Landmark</span>. Each of these
-								attributes are stored natively on chain where they can be
+								attributes are stored natively on-chain where they can be
 								referenced and remixed by creators.
 							</p>
 							<div className="sample-token-set">
@@ -282,17 +282,17 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 					<div className="detail-item">
-						<h3 className="detail-hd">PlacesDAO, Proceeds, + Placehodlers</h3>
+						<h3 className="detail-hd">Places DAO, Proceeds, + Placehodlers</h3>
 						<div className="detail-content">
 							<p>
-								Immutably storing geographic information on-chain will require a
+								Storing geographic information on-chain will require a
 								meaningful investment of resources over time.
 							</p>
 							<p>
-								To that end, the PlacesDAO treasury receives 75% of ETH proceeds
+								To that end, the Places DAO treasury receives 75% of ETH proceeds
 								from each drop. The treasury will be used to fund contract fees
 								for future drops. In this way a virtuous cycle can fuel
-								expansion of Places to new neighborhoods and cities. PlacesDAO
+								expansion of Places to new neighborhoods and cities. Places DAO
 								also aims to fund projects that benefit the Places ecosystem as
 								a whole.
 							</p>
@@ -300,29 +300,29 @@ const Home: NextPage = () => {
 								The remaining 25% ETH is transferred via contract to a unique
 								Neighborhood treasury (defined per each drop) where it will be
 								disbursed to one or more local projects at the decision of
-								PlacesDAO. Here&#x27;s{' '}
+								Places DAO. Here&#x27;s{' '}
 								<a href={process.env.NEXT_PUBLIC_URL_NEIGHBORHOOD_GRANTS}>
 									how neighborhood grants will work
 								</a>
 								.
 							</p>
 							<p>
-								Each Place token is an irrevocable member of PlacesDAO. As the
-								project grows and membership diversifies, DAO members
+								Each Place token is an irrevocable member of Places DAO. As the
+								project grows and membership diversifies, DAO members
 								(Placehodlers?) will become the primary governing body of the
 								Places project.{' '}
 							</p>
 							<div className="detail-callout">
 								<h4 className="detail-hd">
-									Some ideas PlacesDAO is interested in funding…
+									Some ideas Places DAO is interested in funding…
 								</h4>
 								<ul role="list" className="detail-list">
-									<li>An API for searching and discovering Places</li>
+									<li>An API for searching and discovering Places</li>
 									<li>
 										A tool or marketplace for trading Places, especially as the
 										project grows to many neighborhoods and communities
 									</li>
-									<li>PFP + Places remixes</li>
+									<li>PFP + Places remixes</li>
 									<li>
 										Systems that provide verifiable proof-of-location,
 										proof-of-sale, or proof-of-attendance at Places
@@ -332,7 +332,7 @@ const Home: NextPage = () => {
 									<li>List-building dapp for guides and tours</li>
 									<li>
 										Derivative place tokens that can be minted and claimed by
-										verified IRL place owners
+										verified IRL place owners
 									</li>
 									<li>Generative geographic visualizations</li>
 								</ul>
@@ -352,16 +352,16 @@ const Home: NextPage = () => {
 									Gowalla
 								</a>
 								, a gaming company exploring the space where our digital and
-								physical worlds collide. Grounders believe in the power of
+								physical worlds meet. Grounders believe in the power of
 								communities working together and are responsible for creating
 								and seeding the Places project. Gowalla’s own products plan to
 								support Places as a protocal.
 							</p>
 							<p>
-								Because 100% of the ETH proceeds from Places are divided between
-								the PlacesDAO and neighborhood treasuries, Gowalla has chosen to
+								Because 100% of the ETH proceeds from Places are divided between
+								the Places DAO and neighborhood treasuries, Gowalla has chosen to
 								receive Place tokens as compensation. Every 20th Place
-								(beginning with a random ID for each drop) will be automatically
+								(beginning with a random ID for each drop) will be automatically
 								minted and sent to the Grounders multisig.
 							</p>
 							<p>
@@ -377,7 +377,7 @@ const Home: NextPage = () => {
 							<p>
 								Unequivocally, yes! Places are{' '}
 								<a href="https://creativecommons.org/share-your-work/public-domain/cc0/">
-									public domain
+									public domain (cc0)
 								</a>{' '}
 								and you’re invited to use them however you want.
 							</p>
