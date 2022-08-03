@@ -221,7 +221,7 @@ const Home: NextPage = () => {
 								restrictive rights.
 							</p>
 							<p>
-								Places provides a permanent, decentralized, and immutable record
+								Places provides an open and decentralized record
 								of a given place and empowers creators to make art, games, maps,
 								tools, systems, and visualizations.
 							</p>
@@ -230,7 +230,7 @@ const Home: NextPage = () => {
 									Places and their attributes are stored directly on the
 									Ethereum blockchain
 								</span>{' '}
-								and do not point to IPFS or other networks.
+								and do not point to IPFS or other networks.
 							</p>
 						</div>
 					</div>
@@ -238,7 +238,7 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">The Drops</h3>
 						<div className="detail-content">
 							<p>
-								Places will be released in small drops inspired by specific
+								Places is released in small drops inspired by specific
 								neighborhoods, communities, or themes. By seeding each drop
 								around a specific locale or community, Places is able to provide
 								an interesting mix of representative locations in a
@@ -246,9 +246,9 @@ const Home: NextPage = () => {
 								compelling canvas for artists and developers.
 							</p>
 							<p>
-								The first Places drop is Brooklyn. Of course, you can imagine
-								locales such as Austin, Paris, Miami, Los Angeles, Manhattan,
-								London, Sydney, Tokyo, and more are on the Places radar. The
+								The first Places drop was Brooklyn. Of course, you can imagine
+								locales such as Austin, Paris, Miami, Los Angeles, Manhattan,
+								London, Sydney, Tokyo, and more are on the Places radar. The
 								ends of the earth are literally the limit.
 							</p>
 						</div>
@@ -257,8 +257,8 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">Minting Places</h3>
 						<div className="detail-content">
 							<p>
-								In addition to gas, there is a nominal (in ETH terms) fee to
-								mint a place (more on that below 👇). Mint fees are set from
+								In addition to gas, there is a nominal (in ETH terms) fee to
+								mint a place (more on that below 👇). Mint fees are set from
 								drop to drop. Upon each successful mint the next available
 								Places ERC-721 token will be transferred to the minter. Only one
 								place may be minted at a time, and you never know what place
@@ -270,11 +270,11 @@ const Home: NextPage = () => {
 							</p>
 							<p>
 								For now, new drops can be minted from the Places contract
-								directly. In the future we hope to offer wallet connect minting
+								directly. In the future we hope to offer wallet connect minting
 								from this website.
 							</p>
 							<p>
-								Places Contract:{' '}
+								Places Contract:{' '}
 								<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
 									{process.env.NEXT_PUBLIC_ETH_ADDRESS}
 								</a>
