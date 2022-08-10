@@ -96,7 +96,7 @@ const Home: NextPage = () => {
 							href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
 							className="nav-item-link"
 						>
-							Etherscan
+							Contract
 						</a>{' '}
 						<a
 							href={process.env.NEXT_PUBLIC_URL_PLACES_ETH}
@@ -414,7 +414,7 @@ const Home: NextPage = () => {
 						href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}
 						className="footer-link"
 					>
-						Etherscan
+						Contract
 					</a>
 					<a href={process.env.NEXT_PUBLIC_URL_OPENSEA} className="footer-link">
 						OpenSea
