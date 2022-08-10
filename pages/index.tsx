@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 					Places DAO | an open atlas curated by the world and stored on-chain
 				</title>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an growing collection of specific places, submitted and verified by our community, for the purpose of providing the data an open home on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
 					name="description"
 				/>
 				<meta property="og:url" content="https://www.places.xyz" />
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
 					property="og:title"
 				/>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an growing collection of specific places, submitted and verified by our community, for the purpose of providing the data an open home on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
 					property="og:description"
 				/>
 				<meta
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 					name="twitter:title"
 				/>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating an growing collection of specific places, submitted and verified by our community, for the purpose of providing the data an open home on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
 					name="twitter:description"
 				/>
 				<meta
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
 						non-fungible tokens on the Ethereum blockchain. The project aims to
 						create long-term value by curating a growing collection of specific
 						places, submitted and verified by our community, for the purpose of 
-						providing the data an open home on-chain.
+						providing the data openly on-chain.
 					</h2>
 				</div>
 				<div className="drop-details">
