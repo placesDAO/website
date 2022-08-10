@@ -80,12 +80,6 @@ const Home: NextPage = () => {
 					<div className="nav-title">Places</div>
 					<div className="nav-items">
 						<a
-							href={process.env.NEXT_PUBLIC_URL_INTRO}
-							className="nav-item-link"
-						>
-							Intro
-						</a>
-						<a
 							href={process.env.NEXT_PUBLIC_URL_TWITTER}
 							className="nav-item-link"
 						>
@@ -108,14 +102,21 @@ const Home: NextPage = () => {
 							href={process.env.NEXT_PUBLIC_URL_PLACES_ETH}
 							className="nav-item-link"
 						>
-							Places.eth
+							Treasury
 						</a>{' '}
 						<a
 							href={process.env.NEXT_PUBLIC_URL_OPENSEA}
 							className="nav-item-link"
 						>
 							OpenSea
+						</a>{' '}
+						<a
+							href={process.env.NEXT_PUBLIC_URL_LOOKSRARE}
+							className="nav-item-link"
+						>
+							LooksRare
 						</a>
+
 					</div>
 				</div>
 			</div>
@@ -417,6 +418,9 @@ const Home: NextPage = () => {
 					</a>
 					<a href={process.env.NEXT_PUBLIC_URL_OPENSEA} className="footer-link">
 						OpenSea
+					</a>
+					<a href={process.env.NEXT_PUBLIC_URL_LOOKSRARE} className="footer-link">
+						LooksRare
 					</a>
 				</div>
 			</footer>
