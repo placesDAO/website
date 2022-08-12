@@ -180,13 +180,13 @@ const Home: NextPage = () => {
 						<div className="detail-content">
 							<p>
 								Each Place represents a named geographic location
-								with associated metadata. This metadata includes neighborhood,
+								with associated metadata. The metadata includes neighborhood,
 								street address, locality, a 3D geographic coordinate with
 								altitude, and categorical attributes such as{' '}
-								<span className="tag">Tacos</span>,{' '}
+								<span className="tag">Pizza</span>,{' '}
 								<span className="tag">Live Music</span>, or{' '}
-								<span className="tag">Historical Landmark</span>. Each of these
-								attributes are stored natively on-chain where they can be
+								<span className="tag">Historical Landmark</span>. All
+								attributes are stored on-chain where they can be
 								referenced and remixed by creators.
 							</p>
 							<div className="sample-token-set">
@@ -218,8 +218,8 @@ const Home: NextPage = () => {
 						<div className="detail-content">
 							<p>
 								Most of the world’s mapping and place data is controlled by
-								large corporations. It is costly to license or laden with
-								restrictive rights.
+								large corporations. It is costly to license and is often laden with
+								restrictions.
 							</p>
 							<p>
 								Places provides an open and decentralized record
@@ -239,7 +239,7 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">The Drops</h3>
 						<div className="detail-content">
 							<p>
-								Places is released in small drops inspired by specific
+								Places is released in focused drops inspired by specific
 								neighborhoods, communities, or themes. By seeding each drop
 								around a specific locale or community, Places is able to provide
 								an interesting mix of representative locations in a
@@ -258,7 +258,7 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">Minting Places</h3>
 						<div className="detail-content">
 							<p>
-								In addition to gas, there is a nominal (in ETH terms) fee to
+								In addition to gas, there is a nominal fee to
 								mint a place (more on that below 👇). Mint fees are set from
 								drop to drop. Upon each successful mint the next available
 								Places ERC-721 token will be transferred to the minter. Only one
