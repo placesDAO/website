@@ -18,7 +18,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
-import { MintButton } from '../components/MintButton'
+import { MintSection } from '../components/MintSection'
 
 const ContractStats = dynamic(
 	// @ts-ignore Not sure why typing is off.
@@ -178,7 +178,7 @@ const Home: NextPage = () => {
 						</a>
 					</p>
 					<ContractStats />
-					<MintButton />
+					<MintSection />
 				</div>
 				<div className="details">
 					<div className="detail-item">
