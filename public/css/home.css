@@ -1,3 +1,9 @@
+:root {
+	--blue-1: #2681ff;
+
+	--bg-blue: var(--blue-1);
+}
+
 body {
 	background-color: #131313;
 	font-family: ISO, Arial, sans-serif;
@@ -288,6 +294,32 @@ ul {
 .footer-link {
 	margin-right: 12px;
 	margin-left: 12px;
+}
+
+.button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+
+	background: transparent;
+
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
+
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+
+	background-color: var(--bg-blue);
 }
 
 @media screen and (max-width: 767px) {
