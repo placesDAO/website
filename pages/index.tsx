@@ -15,7 +15,6 @@
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 const MintSection = dynamic(
@@ -149,7 +148,7 @@ const Home: NextPage = () => {
 				</div>
 				<div className="drop-details">
 					<div className="detail-icon">
-						<Image
+						<img
 							src="/images/oakland.svg"
 							loading="lazy"
 							width="32"
@@ -201,7 +200,7 @@ const Home: NextPage = () => {
 							</p>
 							<div className="sample-token-set">
 								<div className="sample-token">
-									<Image
+									<img
 										src="/images/place-parachute_jump.svg"
 										loading="lazy"
 										width="520"
@@ -211,7 +210,7 @@ const Home: NextPage = () => {
 									/>
 								</div>
 								<div className="sample-token">
-									<Image
+									<img
 										src="/images/place-la_superior.svg"
 										loading="lazy"
 										width="520"

@@ -55,13 +55,13 @@ export const createWeb3Kit = ({
 		chains,
 	})
 
-	console.log('wagmiClient', {
-		infuraId,
-		network,
-		connectors,
-		provider,
-		chains,
-	})
+	// console.log('wagmiClient', {
+	// 	infuraId,
+	// 	network,
+	// 	connectors,
+	// 	provider,
+	// 	chains,
+	// })
 
 	const wagmiClient = createClient({
 		autoConnect: true,
