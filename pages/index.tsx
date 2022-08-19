@@ -24,11 +24,11 @@ const MintSection = dynamic(
 	{ loading: () => <p>loading wallet…</p>, ssr: false },
 )
 
-// const ContractStats = dynamic(
-// 	// @ts-ignore Not sure why typing is off.
-// 	() => import('../components/ContractStats').then((mod) => mod.ContractStats),
-// 	{ loading: () => <p>loading contract stats…</p>, ssr: false },
-// )
+const ContractStats = dynamic(
+	// @ts-ignore Not sure why typing is off.
+	() => import('../components/ContractStats').then((mod) => mod.ContractStats),
+	{ loading: () => <p>loading contract stats…</p>, ssr: false },
+)
 
 const Home: NextPage = () => {
 	return (
@@ -181,7 +181,7 @@ const Home: NextPage = () => {
 							{process.env.NEXT_PUBLIC_ETH_ADDRESS}
 						</a>
 					</p>
-					{/* <ContractStats /> */}
+					<ContractStats />
 					<MintSection />
 				</div>
 				<div className="details">
