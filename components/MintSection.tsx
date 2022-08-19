@@ -1,12 +1,13 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-
-export const YourApp = () => {
-	return <ConnectButton />
-}
+import { useAccount } from 'wagmi'
+import { MintButton } from './MintButton'
 
 export const MintSection = () => {
+	const { status } = useAccount()
+
 	return (
 		<div>
+			{status === 'connected' ? <MintButton /> : null}
 			<ConnectButton />
 		</div>
 	)

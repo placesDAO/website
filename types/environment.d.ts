@@ -4,7 +4,7 @@ declare global {
 			NEXT_PUBLIC_APP_ENIRONMENT: 'development' | 'production'
 			NEXT_PUBLIC_WEB3_NETWORK: 'local' | 'testnet' | 'mainnet'
 			NEXT_PUBLIC_WEB3_INFURA_ID: string
-			NEXT_PUBLIC_WEB3_PASSPORT_CONTRACT_ADDRESS: string
+			NEXT_PUBLIC_WEB3_PLACES_CONTRACT_ADDRESS: string
 		}
 	}
 }

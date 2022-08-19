@@ -1,6 +1,5 @@
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
-import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { getDefaultWallets } from '@rainbow-me/rainbowkit'
+import { chain, configureChains, createClient } from 'wagmi'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
@@ -27,8 +26,8 @@ const providerByNetwork = ({
 		local: [
 			jsonRpcProvider({
 				rpc: () => ({
-					http: 'http://localhost:9454',
-					webSocket: 'ws://localhost:9454',
+					http: 'http://127.0.0.1:9545/',
+					webSocket: 'ws://127.0.0.1:9545/',
 				}),
 			}),
 		],
@@ -46,14 +45,13 @@ export const createWeb3Kit = ({
 	infuraId: string
 	network: Web3NetworkOptions
 }) => {
-	console.log({ infuraId, network })
 	const { chains, provider } = configureChains(
 		CHAINS_BY_NETWORK[network],
 		providerByNetwork({ infuraId, network }),
 	)
 
 	const { connectors } = getDefaultWallets({
-		appName: 'Outsiders',
+		appName: 'Places',
 		chains,
 	})
 
@@ -62,6 +60,7 @@ export const createWeb3Kit = ({
 		network,
 		connectors,
 		provider,
+		chains,
 	})
 
 	const wagmiClient = createClient({
