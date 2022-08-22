@@ -1,4 +1,9 @@
-import { usePrepareContractWrite, useContractWrite } from 'wagmi'
+import {
+	usePrepareContractWrite,
+	useContractWrite,
+	useWaitForTransaction,
+} from 'wagmi'
+import { utils } from 'ethers'
 import { placesABI } from '../lib/places-abi'
 
 // This error is coming up during dev and not sure it's applicable to
@@ -13,11 +18,16 @@ export const MintButton = () => {
 		addressOrName: process.env.NEXT_PUBLIC_WEB3_PLACES_CONTRACT_ADDRESS,
 		contractInterface: placesABI,
 		functionName: 'mint',
+		args: {
+			value: utils.parseEther('0.05'),
+		},
 	})
 
-	const { write } = useContractWrite(config)
+	const { data, write } = useContractWrite(config)
 
-	// TODO: provide some visual feedback for transaction processing
+	const { isLoading, isSuccess } = useWaitForTransaction({
+		hash: data?.hash,
+	})
 
 	return (
 		<>
@@ -27,6 +37,16 @@ export const MintButton = () => {
 			{error && error.message !== ANNOYING_SIGNER_GET_ADDRESS_ERROR && (
 				<div>An error occurred preparing the transaction: {error.message}</div>
 			)}
+			{isSuccess ? (
+				<>
+					You minted
+					<div>
+						<a href={`https://etherscan.io/tx/${data?.hash}`}>
+							Etherscan ${data?.hash}
+						</a>
+					</div>
+				</>
+			) : null}
 		</>
 	)
 }
