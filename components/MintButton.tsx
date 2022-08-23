@@ -74,7 +74,7 @@ export const MintButton = () => {
 			</div>
 			{isSuccess ? (
 				<div>
-					Success! Check our your Place: {` `}
+					Success! Check your Place out: {` `}
 					<span>
 						<a href={`https://etherscan.io/tx/${data?.hash}`}>
 							Etherscan ${data?.hash}
