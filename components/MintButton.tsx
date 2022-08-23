@@ -56,19 +56,31 @@ export const MintButton = () => {
 					disabled={!write}
 					onClick={() => write?.()}
 				>
-					{isLoading ? 'Minting a Place of your own…' : 'Mint Place'}
+					{isLoading ? (
+						<div style={{ display: 'flex' }}>
+							Minting a Place of your own
+							<div className="lds-ellipsis">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					) : (
+						'Mint Place'
+					)}
 				</button>
 				<MintingError error={prepError ?? error} />
 			</div>
 			{isSuccess ? (
-				<>
-					You minted
-					<div>
+				<div>
+					Success! Check our your Place: {` `}
+					<span>
 						<a href={`https://etherscan.io/tx/${data?.hash}`}>
 							Etherscan ${data?.hash}
 						</a>
-					</div>
-				</>
+					</span>
+				</div>
 			) : null}
 		</>
 	)
