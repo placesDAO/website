@@ -1,3 +1,9 @@
+:root {
+	--color-blue-1: #2681ff;
+
+	--bg-blue: var(--color-blue-1);
+}
+
 body {
 	background-color: #131313;
 	font-family: ISO, Arial, sans-serif;
@@ -374,4 +380,61 @@ ul {
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
+}
+
+.button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+
+	background: transparent;
+
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
+
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: 1;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+
+	background-color: var(--bg-blue);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	gap: 1ch;
+	padding-block: 4px 2px;
+	padding-inline: 1px;
+
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+
+	text-shadow: 0 1px 0 #000;
+}
+
+.button[disabled] {
+	background-color: grey;
+	color: #aaa;
+}
+
+.error-message {
+	overflow-x: scroll;
+	font-size: 16px;
+}
+
+.v-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }

@@ -2,7 +2,12 @@ import '@rainbow-me/rainbowkit/styles.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { mapPinAscii } from '../ascii/map-pin'
-import { RainbowKitProvider, WagmiConfig, createWeb3Kit } from '../lib/web3'
+import {
+	RainbowKitProvider,
+	WagmiConfig,
+	createWeb3Kit,
+	lightTheme,
+} from '../lib/web3'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	console.log(mapPinAscii, 'font-family: mono')
@@ -14,7 +19,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<WagmiConfig client={wagmiClient}>
-			<RainbowKitProvider chains={chains}>
+			<RainbowKitProvider
+				chains={chains}
+				theme={lightTheme({ fontStack: 'system', overlayBlur: 'small' })}
+			>
 				<Component {...pageProps} />
 			</RainbowKitProvider>
 		</WagmiConfig>

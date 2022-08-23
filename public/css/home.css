@@ -1,7 +1,7 @@
 :root {
-	--blue-1: #2681ff;
+	--color-blue-1: #2681ff;
 
-	--bg-blue: var(--blue-1);
+	--bg-blue: var(--color-blue-1);
 }
 
 body {
