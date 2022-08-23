@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 					Places DAO | an open atlas curated by the world and stored on-chain
 				</title>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project creates long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing free (cc0) queryable data that is stored fully on-chain."
 					name="description"
 				/>
 				<meta property="og:url" content="https://www.places.xyz" />
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
 					property="og:title"
 				/>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project creates long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing free (cc0) queryable data that is stored fully on-chain."
 					property="og:description"
 				/>
 				<meta
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 					name="twitter:title"
 				/>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to create long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing the data openly on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project creates long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing free (cc0) queryable data that is stored fully on-chain."
 					name="twitter:description"
 				/>
 				<meta
@@ -136,10 +136,10 @@ const Home: NextPage = () => {
 				<div className="intro">
 					<h2>
 						Places is an experiment to establish geographic locations as
-						non-fungible tokens on the Ethereum blockchain. The project aims to
-						create long-term value by curating a growing collection of specific
+						non-fungible tokens on the Ethereum blockchain. The project
+						creates long-term value by curating a growing collection of specific
 						places, submitted and verified by our community, for the purpose of 
-						providing the data openly on-chain.
+						providing free (cc0) queryable data that is stored fully on-chain.
 					</h2>
 				</div>
 				<div className="drop-details">
@@ -318,7 +318,7 @@ const Home: NextPage = () => {
 									Some ideas Places DAO is interested in funding…
 								</h4>
 								<ul role="list" className="detail-list">
-									<li>An API for searching and discovering Places</li>
+									<li>An open API making the Place data easily accessible</li>
 									<li>
 										A tool or marketplace for trading Places, especially as the
 										project grows to many neighborhoods and communities
@@ -356,7 +356,7 @@ const Home: NextPage = () => {
 								physical worlds meet. Grounders believe in the power of
 								communities working together and are responsible for creating
 								and seeding the Places project. Gowalla’s own products plan to
-								support Places as a protocal.
+								build on top of Places as a data source where applicable.
 							</p>
 							<p>
 								Because 100% of the ETH proceeds from Places are divided between
