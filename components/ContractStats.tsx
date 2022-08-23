@@ -31,6 +31,7 @@ export const ContractStats = () => {
 		<>
 			<p style={{ marginBottom: '0' }}>
 				{utils.formatEther(data?.[2] as BigNumberish)}
+				{` `}
 				ETH
 			</p>
 			<p>
