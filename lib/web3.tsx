@@ -62,6 +62,7 @@ export const PlacesConnectButton = () => {
 										onClick={openChainModal}
 										type="button"
 										className="button"
+										data-variant="secondary"
 									>
 										Wrong network
 									</button>
@@ -75,6 +76,7 @@ export const PlacesConnectButton = () => {
 										style={{ display: 'flex', alignItems: 'center' }}
 										type="button"
 										className="button"
+										data-variant="secondary"
 									>
 										{chain.hasIcon && (
 											<div
@@ -103,6 +105,7 @@ export const PlacesConnectButton = () => {
 										onClick={openAccountModal}
 										type="button"
 										className="button"
+										data-variant="secondary"
 									>
 										{account.displayName}
 										{account.displayBalance

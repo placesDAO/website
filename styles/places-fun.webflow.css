@@ -1,5 +1,8 @@
 :root {
 	--color-blue-1: #2681ff;
+	--color-blue-2: #102440;
+
+	--color-gray-1: #131313;
 
 	--bg-blue: var(--color-blue-1);
 }
@@ -383,6 +386,8 @@ ul {
 }
 
 .button {
+	--button-bg: var(--bg-blue);
+
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -405,7 +410,7 @@ ul {
 	/* Corrects inability to style clickable `input` types in iOS */
 	-webkit-appearance: none;
 
-	background-color: var(--bg-blue);
+	background-color: var(--button-bg);
 
 	display: inline-flex;
 	justify-content: center;
@@ -426,6 +431,10 @@ ul {
 .button[disabled] {
 	background-color: grey;
 	color: #aaa;
+}
+
+.button[data-variant='secondary'] {
+	--button-bg: var(--color-gray-1);
 }
 
 .error-message {
