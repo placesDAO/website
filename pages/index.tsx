@@ -15,8 +15,15 @@
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import dynamic from 'next/dynamic'
+
+// bump for mainnet testing
+
+const MintSection = dynamic(
+	// @ts-ignore Not sure why typing is off.
+	() => import('../components/MintSection').then((mod) => mod.MintSection),
+	{ loading: () => <p>loading wallet…</p>, ssr: false },
+)
 
 const ContractStats = dynamic(
 	// @ts-ignore Not sure why typing is off.
@@ -116,7 +123,6 @@ const Home: NextPage = () => {
 						>
 							LooksRare
 						</a>
-
 					</div>
 				</div>
 			</div>
@@ -136,7 +142,7 @@ const Home: NextPage = () => {
 				<div className="intro">
 					<h2>
 						Places is an experiment to establish geographic locations as
-						non-fungible tokens on the Ethereum blockchain. The project
+            non-fungible tokens on the Ethereum blockchain. The project
 						creates long-term value by curating a growing collection of specific
 						places, submitted and verified by our community, for the purpose of 
 						providing free (cc0) queryable data that is stored fully on-chain.
@@ -144,7 +150,7 @@ const Home: NextPage = () => {
 				</div>
 				<div className="drop-details">
 					<div className="detail-icon">
-						<Image
+						<img
 							src="/images/oakland.svg"
 							loading="lazy"
 							width="32"
@@ -156,16 +162,20 @@ const Home: NextPage = () => {
 					<h3 className="callout">the second drop</h3>
 					<h4 className="detail-hd">Oakland</h4>
 					<p>
-						Our second Places drop celebrates the city of Oakland with 500 unique locations found in the vibrant neighborhoods and communities of the East Bay. This drop includes places like Temescal Alley, Oakland Arena, Hasta Muerte Coffee in Fruitvale, and Guerilla Cafe in Berkeley.{' '}
+						Our second Places drop celebrates the city of Oakland with 500
+						unique locations found in the vibrant neighborhoods and communities
+						of the East Bay. This drop includes places like Temescal Alley,
+						Oakland Arena, Hasta Muerte Coffee in Fruitvale, and Guerilla Cafe
+						in Berkeley.{' '}
 						<strong>
 							You won&#x27;t know which Place you&#x27;re getting until you
 							mint.
 						</strong>
 					</p>
 					<p>
-						Remember, Places is still an experiment. Contract is not audited. You
-						DO NOT have to be in or from the drop area to mint. Mint at your own
-						risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
+						Remember, Places is still an experiment. Contract is not audited.
+						You DO NOT have to be in or from the drop area to mint. Mint at your
+						own risk. And have fun. If it&#x27;s not fun, don&#x27;t do it.
 					</p>
 					<p>
 						<a href={process.env.NEXT_PUBLIC_URL_ETHERSCAN}>
@@ -173,25 +183,26 @@ const Home: NextPage = () => {
 						</a>
 					</p>
 					<ContractStats />
+					<MintSection />
 				</div>
 				<div className="details">
 					<div className="detail-item">
 						<h3 className="detail-hd">What in the world?!</h3>
 						<div className="detail-content">
 							<p>
-								Each Place represents a named geographic location
-								with associated metadata. The metadata includes neighborhood,
-								street address, locality, a 3D geographic coordinate with
-								altitude, and categorical attributes such as{' '}
+								Each Place represents a named geographic location with
+								associated metadata. The metadata includes neighborhood, street
+								address, locality, a 3D geographic coordinate with altitude, and
+								categorical attributes such as{' '}
 								<span className="tag">Pizza</span>,{' '}
 								<span className="tag">Live Music</span>, or{' '}
-								<span className="tag">Historical Landmark</span>. All
-								attributes are stored on-chain where they can be
-								referenced and remixed by creators.
+								<span className="tag">Historical Landmark</span>. All attributes
+								are stored on-chain where they can be referenced and remixed by
+								creators.
 							</p>
 							<div className="sample-token-set">
 								<div className="sample-token">
-									<Image
+									<img
 										src="/images/place-parachute_jump.svg"
 										loading="lazy"
 										width="520"
@@ -201,7 +212,7 @@ const Home: NextPage = () => {
 									/>
 								</div>
 								<div className="sample-token">
-									<Image
+									<img
 										src="/images/place-la_superior.svg"
 										loading="lazy"
 										width="520"
@@ -218,13 +229,13 @@ const Home: NextPage = () => {
 						<div className="detail-content">
 							<p>
 								Most of the world’s mapping and place data is controlled by
-								large corporations. It is costly to license and is often laden with
-								restrictions.
+								large corporations. It is costly to license and is often laden
+								with restrictions.
 							</p>
 							<p>
-								Places provides an open and decentralized record
-								of a given place and empowers creators to make art, games, maps,
-								tools, systems, and visualizations.
+								Places provides an open and decentralized record of a given
+								place and empowers creators to make art, games, maps, tools,
+								systems, and visualizations.
 							</p>
 							<p>
 								<span className="text-highlight">
@@ -258,13 +269,13 @@ const Home: NextPage = () => {
 						<h3 className="detail-hd">Minting Places</h3>
 						<div className="detail-content">
 							<p>
-								In addition to gas, there is a nominal fee to
-								mint a place (more on that below 👇). Mint fees are set from
-								drop to drop. Upon each successful mint the next available
-								Places ERC-721 token will be transferred to the minter. Only one
-								place may be minted at a time, and you never know what place
-								you’ll receive. Certain drops may also limit the total number of
-								Places a wallet address is able to mint.{' '}
+								In addition to gas, there is a nominal fee to mint a place (more
+								on that below 👇). Mint fees are set from drop to drop. Upon
+								each successful mint the next available Places ERC-721 token
+								will be transferred to the minter. Only one place may be minted
+								at a time, and you never know what place you’ll receive. Certain
+								drops may also limit the total number of Places a wallet address
+								is able to mint.{' '}
 								<span className="text-highlight">
 									The Places contract is NOT audited so mint at your own risk.
 								</span>
@@ -290,12 +301,12 @@ const Home: NextPage = () => {
 								meaningful investment of resources over time.
 							</p>
 							<p>
-								To that end, the Places DAO treasury receives 75% of ETH proceeds
-								from each drop. The treasury will be used to fund contract fees
-								for future drops. In this way a virtuous cycle can fuel
-								expansion of Places to new neighborhoods and cities. Places DAO
-								also aims to fund projects that benefit the Places ecosystem as
-								a whole.
+								To that end, the Places DAO treasury receives 75% of ETH
+								proceeds from each drop. The treasury will be used to fund
+								contract fees for future drops. In this way a virtuous cycle can
+								fuel expansion of Places to new neighborhoods and cities. Places
+								DAO also aims to fund projects that benefit the Places ecosystem
+								as a whole.
 							</p>
 							<p>
 								The remaining 25% ETH is transferred via contract to a unique
@@ -360,8 +371,8 @@ const Home: NextPage = () => {
 							</p>
 							<p>
 								Because 100% of the ETH proceeds from Places are divided between
-								the Places DAO and neighborhood treasuries, Gowalla has chosen to
-								receive Place tokens as compensation. Every 20th Place
+								the Places DAO and neighborhood treasuries, Gowalla has chosen
+								to receive Place tokens as compensation. Every 20th Place
 								(beginning with a random ID for each drop) will be automatically
 								minted and sent to the Grounders multisig.
 							</p>
@@ -390,10 +401,9 @@ const Home: NextPage = () => {
 								gathered by our community.
 							</p>
 							<p>
-								This website and a handful of other project resources are {' '}
-								<a href={process.env.NEXT_PUBLIC_URL_GITHUB}>
-									open source
-								</a>{''}.
+								This website and a handful of other project resources are{' '}
+								<a href={process.env.NEXT_PUBLIC_URL_GITHUB}>open source</a>
+								{''}.
 							</p>
 						</div>
 					</div>
@@ -419,7 +429,10 @@ const Home: NextPage = () => {
 					<a href={process.env.NEXT_PUBLIC_URL_OPENSEA} className="footer-link">
 						OpenSea
 					</a>
-					<a href={process.env.NEXT_PUBLIC_URL_LOOKSRARE} className="footer-link">
+					<a
+						href={process.env.NEXT_PUBLIC_URL_LOOKSRARE}
+						className="footer-link"
+					>
 						LooksRare
 					</a>
 				</div>
