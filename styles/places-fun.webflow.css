@@ -7,6 +7,10 @@
 	--bg-blue: var(--color-blue-1);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #131313;
 	font-family: ISO, Arial, sans-serif;

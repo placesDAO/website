@@ -142,13 +142,13 @@ const Home: NextPage = () => {
 				<div className="intro">
 					<h2>
 						Places is an experiment to establish geographic locations as
-            non-fungible tokens on the Ethereum blockchain. The project
-						creates long-term value by curating a growing collection of specific
-						places, submitted and verified by our community, for the purpose of 
+						non-fungible tokens on the Ethereum blockchain. The project creates
+						long-term value by curating a growing collection of specific places,
+						submitted and verified by our community, for the purpose of
 						providing free (cc0) queryable data that is stored fully on-chain.
 					</h2>
 				</div>
-				<div className="drop-details">
+				<div className="drop-details" id="latest-drop-title">
 					<div className="detail-icon">
 						<img
 							src="/images/oakland.svg"
@@ -281,9 +281,8 @@ const Home: NextPage = () => {
 								</span>
 							</p>
 							<p>
-								For now, new drops can be minted from the Places contract
-								directly. In the future we hope to offer wallet connect minting
-								from this website.
+								Check out the <a href="#latest-drop-title">latest drop above</a>{' '}
+								☝️ to mint a Place of your own!
 							</p>
 							<p>
 								Places Contract:{' '}
