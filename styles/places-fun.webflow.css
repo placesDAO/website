@@ -418,8 +418,8 @@ ul {
 	text-align: center;
 
 	gap: 1ch;
-	padding-block: 4px 2px;
-	padding-inline: 1px;
+	padding-block: 12px 6px;
+	padding-inline: 6px;
 
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
