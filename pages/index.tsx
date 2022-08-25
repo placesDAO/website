@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 				</title>
 				<meta
 					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to curate an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing free
-					(cc0) queryable data stored fully on-chain."
+					(cc0) queryable place data stored fully on-chain."
 					name="description"
 				/>
 				<meta property="og:url" content="https://www.places.xyz" />
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
 						NFTs on the Ethereum blockchain. The project aims to curate
 						an ever-growing collection of specific places, submitted and
 						verified by our community, for the purpose of providing free
-						(cc0) queryable data stored fully on-chain.
+						(cc0) queryable place data stored fully on-chain.
 					</h2>
 				</div>
 				<div className="drop-details" id="latest-drop-title">
