@@ -39,7 +39,8 @@ const Home: NextPage = () => {
 					Places DAO | an open atlas curated by the world and stored on-chain
 				</title>
 				<meta
-					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project creates long-term value by curating a growing collection of specific places, submitted and verified by our community, for the purpose of providing free (cc0) queryable data that is stored fully on-chain."
+					content="Places is an experiment to establish geographic locations as non-fungible tokens on the Ethereum blockchain. The project aims to curate an ever-growing collection of specific places, submitted and verified by our community, for the purpose of providing free
+					(cc0) queryable data stored fully on-chain."
 					name="description"
 				/>
 				<meta property="og:url" content="https://www.places.xyz" />
@@ -142,10 +143,10 @@ const Home: NextPage = () => {
 				<div className="intro">
 					<h2>
 						Places is an experiment to establish geographic locations as
-						non-fungible tokens on the Ethereum blockchain. The project creates
-						long-term value by curating a growing collection of specific places,
-						submitted and verified by our community, for the purpose of
-						providing free (cc0) queryable data that is stored fully on-chain.
+						NFTs on the Ethereum blockchain. The project aims to curate
+						an ever-growing collection of specific places, submitted and
+						verified by our community, for the purpose of providing free
+						(cc0) queryable data stored fully on-chain.
 					</h2>
 				</div>
 				<div className="drop-details" id="latest-drop-title">
